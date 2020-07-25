@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		467FC84723F3738C00C15592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84623F3738C00C15592 /* Assets.xcassets */; };
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
+		ABCC0E4E24CC9C28006BB3A8 /* CRUTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCC0E4D24CC9C28006BB3A8 /* CRUTimedTask.m */; };
+		ABCC0E5124CCA52C006BB3A8 /* CRUTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCC0E5024CCA52C006BB3A8 /* CRUTimedTaskController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		467FC84923F3738C00C15592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467FC84B23F3738C00C15592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ABCC0E4C24CC9C28006BB3A8 /* CRUTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRUTimedTask.h; sourceTree = SOURCE_ROOT; };
+		ABCC0E4D24CC9C28006BB3A8 /* CRUTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRUTimedTask.m; sourceTree = SOURCE_ROOT; };
+		ABCC0E4F24CCA52C006BB3A8 /* CRUTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CRUTimedTaskController.h; path = "/Users/patelpra/Development/ios-module-project-objective-c-fundamentals-II/CRUTimedTaskController.h"; sourceTree = "<absolute>"; };
+		ABCC0E5024CCA52C006BB3A8 /* CRUTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRUTimedTaskController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ABCC0E4C24CC9C28006BB3A8 /* CRUTimedTask.h */,
+				ABCC0E4D24CC9C28006BB3A8 /* CRUTimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,9 +115,12 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ABCC0E4F24CCA52C006BB3A8 /* CRUTimedTaskController.h */,
+				ABCC0E5024CCA52C006BB3A8 /* CRUTimedTaskController.m */,
 			);
-			path = "Model Controller";
-			sourceTree = "<group>";
+			name = "Model Controller";
+			path = "/Users/patelpra/Development/ios-module-project-objective-c-fundamentals-II/TimeTracker/..";
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
@@ -137,6 +148,7 @@
 		467FC82F23F3738B00C15592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CRU;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -146,7 +158,7 @@
 				};
 			};
 			buildConfigurationList = 467FC83223F3738B00C15592 /* Build configuration list for PBXProject "TimeTracker" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -182,8 +194,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				ABCC0E4E24CC9C28006BB3A8 /* CRUTimedTask.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				ABCC0E5124CCA52C006BB3A8 /* CRUTimedTaskController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
