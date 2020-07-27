@@ -21,8 +21,6 @@
 @property (nonatomic) IBOutlet UITextField *timeWorkedTextField;
 @property (nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) IBOutlet UIButton *logTimeButton;
-@property (nonatomic) IBOutlet UIButton *cancelButton;
-
 
 @end
 
@@ -36,7 +34,6 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    self.cancelButton.hidden = YES;
 }
 
 - (IBAction)logTime:(id)sender
@@ -59,8 +56,6 @@
     [self.logTimeButton setTitle:@"Log Time" forState:UIControlStateNormal];
     [self.logTimeButton layoutIfNeeded];
     [UIView setAnimationsEnabled:YES];
-    
-    self.cancelButton.hidden = YES;
     
     [self clearAllTextViews];
     [self deselectRow];
@@ -95,6 +90,25 @@
     cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.2f", timedTask.total];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CRUTimedTask *timedTask = [self.timedTaskController.timedTasks objectAtIndex:indexPath.row];
+    
+    self.clientTextField.text = timedTask.client;
+    self.summaryTextField.text = timedTask.summary;
+    self.hourlyRateTextField.text = [NSString stringWithFormat:@"%g", timedTask.hourlyRate];
+    self.timeWorkedTextField.text = [NSString stringWithFormat:@"%ld", (long)timedTask.hoursWorked];
+    
+    
+    [UIView setAnimationsEnabled:NO];
+    [self.logTimeButton setTitle:@"Save Changes" forState:UIControlStateNormal];
+    [self.logTimeButton layoutIfNeeded];
+    [UIView setAnimationsEnabled:YES];
+    
+    self.searchIndexPath = indexPath;
+    
 }
 
 @end
